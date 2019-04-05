@@ -5,7 +5,7 @@ PAT = 'EAAEHUFnKtU4BALdtoWbn1RUoMIl7KmZBIfjzd1HmpZA0sQBbsyZBa8G2O7e90h6hia5w6H2P
 app = Flask(__name__)
 fb_url = 'https://graph.facebook.com/v2.6/me/messages'
 
-@app.route('/verify', methods=['GET'])
+@app.route('/', methods=['GET'])
 def verify():
     if request.args.get('hub.verify_token', '') == '90293':
         return request.args.get('hub.challenge', '')
