@@ -1,6 +1,6 @@
 from flask import Flask, request
 import json
-
+import requests
 PAT = 'EAAEHUFnKtU4BALdtoWbn1RUoMIl7KmZBIfjzd1HmpZA0sQBbsyZBa8G2O7e90h6hia5w6H2PCZAEgBOvcRZBzqMkx19I3FKBV5JqgndPaVorjrnOnY84DjYXZAxkRSTLlX55df8mraAFpZAxWZC4ZAyoUcflqlPxaBL9YPvAkQWEZCsgZDZD'
 app = Flask(__name__)
 fb_url = 'https://graph.facebook.com/v2.6/me/messages'
