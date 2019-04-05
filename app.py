@@ -14,7 +14,7 @@ def verify():
 
 @app.route('/', methods=['POST'])
 def message_handler():
-    print "Handling messages"
+    print("Handling messages")
     payload = request.get_data()
     print payload
     for sender, message in message_events(payload):
