@@ -18,7 +18,7 @@ def message_handler():
     payload = request.get_data()
     print payload
     for sender, message in message_events(payload):
-        print "Incoming message from %s %s" % (sender, message)
+        print("Incoming message from %s %s" % (sender, message))
         send_message(PAT, sender, message)
     return "ok"
 
@@ -43,7 +43,7 @@ def send_message(token, recipient, text):
         }),
         headers={'Content-type':'application/json'})
     if r.status_code != requests.codes.ok:
-        print r.message_text
+        print(r.message_text)
 
 if __name__ == '__main__':
     app.run()
