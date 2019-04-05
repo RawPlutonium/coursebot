@@ -16,7 +16,7 @@ def verify():
 def message_handler():
     print("Handling messages")
     payload = request.get_data()
-    print payload
+    print(payload)
     for sender, message in message_events(payload):
         print("Incoming message from %s %s" % (sender, message))
         send_message(PAT, sender, message)
